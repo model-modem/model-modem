@@ -1,5 +1,29 @@
-site_name: My Docs
+site_name: Model Modem
+nav:
+  - Model Modem: index.md
+  - Development: 
+    - Docker: docker.md
+
+extra_css:
+  - assets/css/extra.css
 theme:
   name: material
   palette: 
     scheme: slate
+  font:
+    code: Fira Code
+    text: Montserrat
+  icon:
+    logo: material/alpha-m-circle
+  features:
+    - search.suggest
+    - navigation.tabs
+    - navigation.tabs.sticky
+markdown_extensions:
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
