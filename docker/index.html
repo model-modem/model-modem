@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monitoring" class="md-skip">
+        <a href="#docker" class="md-skip">
           Skip to content
         </a>
       
@@ -282,19 +282,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#helpful-docker-commands" class="md-nav__link">
+    Helpful Docker Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Helpful Docker Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#get-runtime-statistics" class="md-nav__link">
     Get Runtime Statistics
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reclaiming-resources" class="md-nav__link">
-    Reclaiming Resources
-  </a>
-  
-    <nav class="md-nav" aria-label="Reclaiming Resources">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#remove-all-stopped-containers" class="md-nav__link">
@@ -306,6 +306,13 @@
           <li class="md-nav__item">
   <a href="#remove-untagged-containers" class="md-nav__link">
     Remove Untagged Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune-everything" class="md-nav__link">
+    Prune Everything
   </a>
   
 </li>
@@ -352,19 +359,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#helpful-docker-commands" class="md-nav__link">
+    Helpful Docker Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="Helpful Docker Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#get-runtime-statistics" class="md-nav__link">
     Get Runtime Statistics
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reclaiming-resources" class="md-nav__link">
-    Reclaiming Resources
-  </a>
-  
-    <nav class="md-nav" aria-label="Reclaiming Resources">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#remove-all-stopped-containers" class="md-nav__link">
@@ -376,6 +383,13 @@
           <li class="md-nav__item">
   <a href="#remove-untagged-containers" class="md-nav__link">
     Remove Untagged Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune-everything" class="md-nav__link">
+    Prune Everything
   </a>
   
 </li>
@@ -398,8 +412,10 @@
               
                 
                 
-                <h1 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">⚓︎</a></h1>
-<h2 id="get-runtime-statistics">Get Runtime Statistics<a class="headerlink" href="#get-runtime-statistics" title="Permanent link">⚓︎</a></h2>
+                <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">⚓︎</a></h1>
+<h2 id="helpful-docker-commands">Helpful Docker Commands<a class="headerlink" href="#helpful-docker-commands" title="Permanent link">⚓︎</a></h2>
+<p>Below are some less-common Docker commands you might find useful.</p>
+<h3 id="get-runtime-statistics">Get Runtime Statistics<a class="headerlink" href="#get-runtime-statistics" title="Permanent link">⚓︎</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker stats <span class="k">$(</span>docker ps --format<span class="o">=</span><span class="s1">&#39;{{.Names}}&#39;</span><span class="k">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -413,8 +429,6 @@
 <li>Block Storage I/O</li>
 <li>Process IDs </li>
 </ul>
-<h2 id="reclaiming-resources">Reclaiming Resources<a class="headerlink" href="#reclaiming-resources" title="Permanent link">⚓︎</a></h2>
-<p>Below are some commands you can run to clean up your local environment when you need to tidy up a bit.</p>
 <h3 id="remove-all-stopped-containers">Remove All Stopped Containers<a class="headerlink" href="#remove-all-stopped-containers" title="Permanent link">⚓︎</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker rm <span class="k">$(</span>docker ps -a -q<span class="k">)</span>
 </code></pre></div>
@@ -424,6 +438,21 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker images -q --filter <span class="s2">&quot;dangling=true&quot;</span> <span class="p">|</span> xargs docker rmi
 </code></pre></div>
 </td></tr></table>
+<h3 id="prune-everything">Prune Everything<a class="headerlink" href="#prune-everything" title="Permanent link">⚓︎</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker system prune --volumes
+</code></pre></div>
+</td></tr></table>
+<p>This command will remove all unused:</p>
+<ul>
+<li>Containers</li>
+<li>Images (dangling &amp; unused)</li>
+<li>Networks</li>
+<li>(Optionally) Volumes</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not want to prune volumes, remove <code>--volumes</code> from the command above.</p>
+</div>
                 
               
               
