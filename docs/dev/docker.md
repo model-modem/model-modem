@@ -1,6 +1,9 @@
-# Monitoring
+# Docker
 
-## Get Runtime Statistics
+## Helpful Docker Commands
+Below are some less-common Docker commands you might find useful.
+
+### Get Runtime Statistics
 ``` bash
 docker stats $(docker ps --format='{{.Names}}')
 ```
@@ -15,9 +18,6 @@ This command will display detailed information about the docker containers you h
 * Block Storage I/O
 * Process IDs 
 
-## Reclaiming Resources
-Below are some commands you can run to clean up your local environment when you need to tidy up a bit.
-
 ### Remove All Stopped Containers
 
 ```bash
@@ -31,3 +31,18 @@ If you have a lot of stopped containers (perhaps you didn't supply a container n
 ``` bash
 docker images -q --filter "dangling=true" | xargs docker rmi
 ```
+
+### Prune Everything
+```bash
+docker system prune --volumes
+```
+
+This command will remove all unused:
+
+* Containers
+* Images (dangling & unused)
+* Networks
+* (Optionally) Volumes
+
+!!! note
+    If you do not want to prune volumes, remove `--volumes` from the command above.

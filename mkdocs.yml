@@ -2,7 +2,7 @@ site_name: Model Modem
 nav:
   - Model Modem: index.md
   - Development: 
-    - Docker: docker.md
+    - Docker: dev/docker.md
 
 extra_css:
   - assets/css/extra.css
@@ -27,3 +27,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.smartsymbols
+  - pymdownx.details
+  - admonition
