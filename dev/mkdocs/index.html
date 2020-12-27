@@ -400,7 +400,12 @@
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">⚓︎</a></h2>
 <h3 id="github-pages-custom-domain">GitHub Pages Custom Domain<a class="headerlink" href="#github-pages-custom-domain" title="Permanent link">⚓︎</a></h3>
 <p>If you are deploying your MKDocs site via the <code>mkdocs gh-deploy</code> command and finding that it is resetting your custom domain name settings, there is a solution for that.</p>
-<p>There is an undocumented feature of MKDocs that it will publish your site to GitHub Pages using a custom domain name <em>only</em> if you create a file called <code>CNAME</code> which contains the custom domain name of your site.</p>
+<p>There is an <a href="https://github.com/mkdocs/mkdocs/issues/1257">undocumented feature</a> of MKDocs that it will publish your site to GitHub Pages using a custom domain name <em>only</em> if you create a file called <code>CNAME</code> which contains the custom domain name of your site.  If you do not create this special file, your site's custom domain name will be wiped out each time you deploy your site.</p>
+<p>For example if your site was called <code>modelmodem.com</code> you would (and I did) create a file called <code>CNAME</code> and place it at the root of your <a href="https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-docs_dir"><code>docs_dir</code></a>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>modelmodem.com
+</code></pre></div>
+</td></tr></table>
+<p class="caption">File <code>/docs/CNAME</code></p>
                 
               
               
