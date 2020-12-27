@@ -3,11 +3,14 @@ nav:
   - Model Modem: index.md
   - Development: 
     - Docker: dev/docker.md
+    - Git: dev/git.md
+    - MKDocs: dev/mkdocs.md
 
 extra_css:
   - assets/css/extra.css
 theme:
   name: material
+  custom_dir: theme_overrides
   palette: 
     scheme: slate
   font:
@@ -19,6 +22,11 @@ theme:
     - search.suggest
     - navigation.tabs
     - navigation.tabs.sticky
+extra:
+  disqus: modelmodem-com
+  social: 
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/djsipe/ 
 markdown_extensions:
   - toc:
       permalink: ⚓︎
@@ -29,3 +37,4 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.details
   - admonition
+  - attr_list
