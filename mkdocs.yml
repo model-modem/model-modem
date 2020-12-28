@@ -5,7 +5,11 @@ nav:
     - Docker: dev/docker.md
     - Git: dev/git.md
     - MKDocs: dev/mkdocs.md
+  - Technology:
+    - My Stack: tech/my-stack.md
 
+
+# Site Customizations
 extra_css:
   - assets/css/extra.css
 theme:
