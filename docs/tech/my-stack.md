@@ -15,11 +15,10 @@ I recently had the pleasure of installing the Big Sur beta, having it totally co
 ----
 
 ### [Bartender][3]
-![Bartender](/assets/logos/bartender.png){: .logo } The number of apps providing compact [Menu Bar apps][4] for MacOS greatly outpaces the amount of space that exists in the menu bar itself.  Bartender helps clear up space by allowing you to hide your less-used menubar application.
+![Bartender](/assets/logos/bartender.png){: .logo } The number of apps providing compact [menu bar apps][4] for MacOS greatly outpaces the amount of space that exists in the menu bar itself.  Bartender helps clear up space by allowing you to hide your less-used menu bar application.
 
 !!! info "Pro Tip"
     You can rearrange your menubar applications natively (with no app needed) by holding down `^ Ctrl` and then clicking and dragging the menubar app.
-
 
 [1]: https://pasteapp.io
 [2]: https://1password.com
