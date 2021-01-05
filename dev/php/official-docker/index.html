@@ -391,6 +391,26 @@
     Location of Installed Resources
   </a>
   
+    <nav class="md-nav" aria-label="Location of Installed Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    Configuration Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-binaries" class="md-nav__link">
+    Key Binaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -494,6 +514,26 @@
     Location of Installed Resources
   </a>
   
+    <nav class="md-nav" aria-label="Location of Installed Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    Configuration Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-binaries" class="md-nav__link">
+    Key Binaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -512,52 +552,55 @@
                 <h1 id="the-official-php-docker-image">The Official PHP Docker Image<a class="headerlink" href="#the-official-php-docker-image" title="Permanent link">⚓︎</a></h1>
 <p>The <a href="https://hub.docker.com/_/php">official PHP Docker image</a> is a good starting place for many PHP projects.  It's a rock-solid implementation of PHP with close attention paid to best practices for PHP.  The downside of this image is that it is <em>not</em> covered in the main different articles and blog posts on the Internet that cover how to configure PHP.  This page is where I try to fill in some of the gaps.</p>
 <h2 id="location-of-installed-resources">Location of Installed Resources<a class="headerlink" href="#location-of-installed-resources" title="Permanent link">⚓︎</a></h2>
+<h3 id="configuration-files">Configuration Files<a class="headerlink" href="#configuration-files" title="Permanent link">⚓︎</a></h3>
+<p>While configuring your application you may need to update the default configuration settings for the image.  The table below lists the locations of some of these files.</p>
 <table>
 <thead>
 <tr>
 <th>Configuration</th>
 <th>Location</th>
-<th>File Name</th>
 <th>Image Variant</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>PEAR Configuration</td>
-<td><code>/usr/local/etc</code></td>
-<td><code>pear.conf</code></td>
+<td>PEAR</td>
+<td><code>/usr/local/etc/pear.conf</code></td>
 <td>All</td>
 </tr>
 <tr>
-<td>FPM Enabled Configuration</td>
-<td><code>/usr/local/etc</code></td>
-<td><code>php-fpm.conf</code></td>
+<td>PHP-FPM Enabled</td>
+<td><code>/usr/local/etc/php-fpm.conf</code></td>
+<td>FPM</td>
+</tr>
+<tr>
+<td>PHP-FPM Enabled Site</td>
+<td><code>/usr/local/etc/php-fpm.d/www.conf</code></td>
 <td>FPM</td>
 </tr>
 </tbody>
 </table>
+<h3 id="key-binaries">Key Binaries<a class="headerlink" href="#key-binaries" title="Permanent link">⚓︎</a></h3>
+<p>Below are some of the key binary files that you may need to know about and whether or not they are on the <a href="http://www.linfo.org/path_env_var.html"><code>PATH</code></a>.</p>
 <table>
 <thead>
 <tr>
 <th>Binaries</th>
 <th>Location</th>
-<th>File Name</th>
 <th>Image Variant</th>
-<th>On <code>$PATH</code> ?</th>
+<th>On <code>PATH</code> ?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>FPM Binary</td>
-<td><code>/usr/local/sbin</code></td>
-<td><code>php-fpm</code></td>
+<td><code>/usr/local/sbin/php-fpm</code></td>
 <td>FPM</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>PHPize</td>
-<td><code>/usr/local/bin</code></td>
-<td><code>phpize</code></td>
+<td><a href="https://www.php.net/manual/en/install.pecl.phpize.php">PHPize</a></td>
+<td><code>/usr/local/bin/phpize</code></td>
 <td>All</td>
 <td>Yes</td>
 </tr>
