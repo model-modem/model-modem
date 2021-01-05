@@ -1,9 +1,12 @@
 site_name: Model Modem
 nav:
-  - Model Modem: index.md
-  - Development: 
-    - Docker: dev/docker.md
-    - Git: dev/git.md
+  - About: index.md
+  - Development:
+    - Cheat Codes: dev/cheat-codes.md
+    - Python: 
+      - pip: dev/py/pip.md
+    - PHP:
+      - Official Docker: dev/php/official-docker.md
     - MKDocs: dev/mkdocs.md
   - Technology:
     - My Stack: tech/my-stack.md

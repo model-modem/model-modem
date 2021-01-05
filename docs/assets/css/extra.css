@@ -23,3 +23,18 @@ img.logo {
   width: 5em;
   margin-right: 1.5em;
 }
+
+.md-typeset table {
+  background-color:rgb(27, 26, 31) !important;
+  border-radius: 0.5em !important;
+}
+
+.md-typeset table code {
+  box-shadow: #ffffff1c 0 1px;
+}
+
+.md-typeset table  th{
+  padding: .25em 1.25em !important;
+  color: #cac9dfad !important;
+  background-color: black !important;
+}
