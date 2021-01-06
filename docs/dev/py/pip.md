@@ -1,8 +1,5 @@
 # Working with `pip`
 
-!!! note
-    This page is a work in process.
-
 ## Serializing Project Package Dependencies
 
 [`pip`][3] doesn't have an automatic mechanism for serializing the different project dependencies you have.  Typically with a Python project, you would document your project's dependencies in a `requirements.txt` file.  This would allow you to quickly re-install all your dependencies when the project is moved to a new machine or re-build for a deployment.
