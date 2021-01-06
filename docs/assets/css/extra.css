@@ -24,6 +24,14 @@ img.logo {
   margin-right: 1.5em;
 }
 
+img.inline-left {
+  float: left;
+  width: 15em;
+  margin-right: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 2px 1px 5px 0 #1a191b ;
+}
+
 .md-typeset table {
   background-color:rgb(27, 26, 31) !important;
   border-radius: 0.5em !important;
