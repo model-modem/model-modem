@@ -349,6 +349,26 @@
     Serializing Project Package Dependencies
   </a>
   
+    <nav class="md-nav" aria-label="Serializing Project Package Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-option-pip-freeze" class="md-nav__link">
+    Default Option: pip freeze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#better-option-pipreqs" class="md-nav__link">
+    Better Option: pipreqs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -494,6 +514,26 @@
     Serializing Project Package Dependencies
   </a>
   
+    <nav class="md-nav" aria-label="Serializing Project Package Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-option-pip-freeze" class="md-nav__link">
+    Default Option: pip freeze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#better-option-pipreqs" class="md-nav__link">
+    Better Option: pipreqs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -515,13 +555,25 @@
 <p>This page is a work in process.</p>
 </div>
 <h2 id="serializing-project-package-dependencies">Serializing Project Package Dependencies<a class="headerlink" href="#serializing-project-package-dependencies" title="Permanent link">⚓︎</a></h2>
+<p><a href="https://pip.pypa.io/en/stable/"><code>pip</code></a> doesn't have an automatic mechanism for serializing the different project dependencies you have.  Typically with a Python project, you would document your project's dependencies in a <code>requirements.txt</code> file.  This would allow you to quickly re-install all your dependencies when the project is moved to a new machine or re-build for a deployment.</p>
+<h3 id="default-option-pip-freeze">Default Option: <code>pip freeze</code><a class="headerlink" href="#default-option-pip-freeze" title="Permanent link">⚓︎</a></h3>
+<p>You can use the <a href="https://pip.pypa.io/en/stable/reference/pip_freeze/"><code>freeze</code></a> command, however, to output all of the dependencies you have installed and that output can then be sent to a <code>requirements.txt</code> file using the command below:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
 </code></pre></div>
 </td></tr></table>
-<p>The pipreqs package can be used to create <code>requirements.txt</code> files with just the packages used in your local project.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>python3 -m pip install pipreqs
+<p class="caption">Serialize all <code>pip</code> modules.</p>
+<h3 id="better-option-pipreqs">Better Option: <code>pipreqs</code><a class="headerlink" href="#better-option-pipreqs" title="Permanent link">⚓︎</a></h3>
+<p>The <a href="https://pypi.org/project/pipreqs/"><code>pipreqs</code></a> package can be used to create <code>requirements.txt</code> files with just the packages used in your local project.  Since <code>pip freeze</code> saves all of the packages in your environment—including the ones you don't actually use in your project, <code>pipreqs</code> is a cleaner solution.</p>
+<p>To install <code>pipreqs</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install pipreqs
 </code></pre></div>
-</td></tr></table></p>
+</td></tr></table>
+<p>You can then generate your project's requirements using the global <code>pipreqs</code> command:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ pipreqs /project/location
+Successfully saved requirements file in /project/location/requirements.txt
+</code></pre></div>
+</td></tr></table>
                 
               
               
