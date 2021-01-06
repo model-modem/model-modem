@@ -7,6 +7,8 @@ nav:
       - pip: dev/py/pip.md
     - PHP:
       - Official Docker: dev/php/official-docker.md
+    - SQL:
+      - SQL Server: dev/sql/sql-server.md
     - MKDocs: dev/mkdocs.md
   - Technology:
     - My Stack: tech/my-stack.md

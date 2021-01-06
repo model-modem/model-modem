@@ -46,3 +46,7 @@ img.inline-left {
   color: #cac9dfad !important;
   background-color: black !important;
 }
+
+.disqus-footer__item {
+  display: none !important;
+} 
