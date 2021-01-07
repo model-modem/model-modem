@@ -14,7 +14,7 @@
     
     
       
-        <title>SQL Server - Model Modem</title>
+        <title>Configuration - Model Modem</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sql-server" class="md-skip">
+        <a href="#docker-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              SQL Server
+              Configuration
             
           </span>
         </div>
@@ -370,14 +370,12 @@
           
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
     
     <label class="md-nav__link" for="nav-2-4">
       SQL
@@ -387,6 +385,50 @@
       <label class="md-nav__title" for="nav-2-4">
         <span class="md-nav__icon md-icon"></span>
         SQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../sql/sql-server/" class="md-nav__link">
+      SQL Server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Docker
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docker" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        Docker
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -407,12 +449,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        SQL Server
+        Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      SQL Server
+      Configuration
     </a>
     
       
@@ -429,8 +471,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#find-any-procedures-containing-text" class="md-nav__link">
-    Find any Procedures Containing &lt;text&gt;
+  <a href="#logging" class="md-nav__link">
+    Logging
   </a>
   
 </li>
@@ -439,48 +481,6 @@
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
-    
-    <label class="md-nav__link" for="nav-2-5">
-      Docker
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Docker" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-5">
-        <span class="md-nav__icon md-icon"></span>
-        Docker
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../docker/config/" class="md-nav__link">
-      Configuration
-    </a>
   </li>
 
         
@@ -574,8 +574,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#find-any-procedures-containing-text" class="md-nav__link">
-    Find any Procedures Containing &lt;text&gt;
+  <a href="#logging" class="md-nav__link">
+    Logging
   </a>
   
 </li>
@@ -593,51 +593,28 @@
               
                 
                 
-                <h1 id="sql-server">SQL Server<a class="headerlink" href="#sql-server" title="Permanent link">⚓︎</a></h1>
-<h2 id="find-any-procedures-containing-text">Find any Procedures Containing <code>&lt;text&gt;</code><a class="headerlink" href="#find-any-procedures-containing-text" title="Permanent link">⚓︎</a></h2>
-<p>You can use these queries<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to search for stored procedures that contain the value <code>Foo</code>.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">OBJECT_NAME</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> 
-    <span class="k">FROM</span> <span class="n">SYSCOMMENTS</span> 
-    <span class="k">WHERE</span> <span class="p">[</span><span class="nb">text</span><span class="p">]</span> <span class="k">LIKE</span> <span class="s1">&#39;%Foo%&#39;</span> 
-    <span class="k">AND</span> <span class="n">OBJECTPROPERTY</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;IsProcedure&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> 
-    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">OBJECT_NAME</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">OBJECT_NAME</span><span class="p">(</span><span class="n">object_id</span><span class="p">)</span>
-    <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">sql_modules</span>
-    <span class="k">WHERE</span> <span class="n">OBJECTPROPERTY</span><span class="p">(</span><span class="n">object_id</span><span class="p">,</span> <span class="s1">&#39;IsProcedure&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">AND</span> <span class="n">definition</span> <span class="k">LIKE</span> <span class="s1">&#39;%Foo%&#39;</span>
-</code></pre></div>
-</td></tr></table>
-<hr />
-<div class="admonition warn">
-<p class="admonition-title">Warn</p>
-<p>Note that <code>ROUTINE_DEFINITION</code> is cropped at 4,000 characters.  It's recommended to use one of the methods above using <code>OBJECTPROPERTY</code> instead.</p>
-</div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="k">ROUTINE_NAME</span><span class="p">,</span> <span class="n">ROUTINE_DEFINITION</span>
-    <span class="k">FROM</span> <span class="n">INFORMATION_SCHEMA</span><span class="p">.</span><span class="n">ROUTINES</span> 
-    <span class="k">WHERE</span> <span class="n">ROUTINE_DEFINITION</span> <span class="k">LIKE</span> <span class="s1">&#39;%Foo%&#39;</span> 
-    <span class="k">AND</span> <span class="n">ROUTINE_TYPE</span><span class="o">=</span><span class="s1">&#39;PROCEDURE&#39;</span>
-</code></pre></div>
-</td></tr></table>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>See: <a href="https://stackoverflow.com/q/5079457/1356593">https://stackoverflow.com/q/5079457/1356593</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                <h1 id="docker-configuration">Docker Configuration<a class="headerlink" href="#docker-configuration" title="Permanent link">⚓︎</a></h1>
+<h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">⚓︎</a></h2>
+<p>It is standard best practice to send logs of applications running in a Docker container to the <a href="https://en.wikipedia.org/wiki/Standard_streams">standard output and error streams</a> of the image's OS (<code>stdout</code> and <code>stderr</code>).  Once you do that, you can view those logs by running the <a href="https://docs.docker.com/config/containers/logging/"><code>docker logs</code></a> command.</p>
+<p>When applications running in your image are designed to write their logs to a file—rather than to the standard output streams—you can use the file handles below (provided by Docker) to stream log events to <code>stdout</code> or <code>stderr</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>File Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STDOUT</code></td>
+<td><code>/proc/self/fd/1</code></td>
+</tr>
+<tr>
+<td><code>STDERR</code></td>
+<td><code>/proc/self/fd/2</code></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -672,7 +649,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../php/official-docker/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../sql/sql-server/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -681,19 +658,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Official Docker
+                SQL Server
               </div>
             </div>
           </a>
         
         
-          <a href="../../docker/config/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../mkdocs/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Configuration
+                MKDocs
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
