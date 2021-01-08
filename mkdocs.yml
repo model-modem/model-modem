@@ -11,6 +11,9 @@ nav:
       - SQL Server: dev/sql/sql-server.md
     - Docker:
       - Configuration: dev/docker/config.md
+    - Linux:
+      - Ubuntu:
+        - Versions: dev/linux/ubuntu/versions.md
     - MKDocs: dev/mkdocs.md
   - Technology:
     - My Stack: tech/my-stack.md
@@ -29,6 +32,7 @@ theme:
     text: Montserrat
   icon:
     logo: material/alpha-m-circle
+    repo: fontawesome/brands/github-square
   features:
     - search.suggest
     - navigation.tabs
@@ -38,6 +42,8 @@ extra:
   social: 
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/djsipe/ 
+repo_url: https://github.com/djsipe/model-modem
+repo_name: Model Modem
 markdown_extensions:
   - toc:
       permalink: ⚓︎
@@ -50,3 +56,6 @@ markdown_extensions:
   - admonition
   - footnotes
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

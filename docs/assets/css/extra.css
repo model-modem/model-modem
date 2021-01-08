@@ -50,3 +50,12 @@ img.inline-left {
 .disqus-footer__item {
   display: none !important;
 } 
+
+.md-content table .super-thead {
+  text-align: center !important;
+  font-weight: bold;
+  border-bottom: 1px solid #3e3d44;
+}
+.md-content table .super-thead:first-child {
+  border-right: 1px solid white;
+}
