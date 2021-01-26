@@ -14,7 +14,7 @@
     
     
       
-        <title>Ubuntu - Model Modem</title>
+        <title>Build - Model Modem</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu-debian-version-names" class="md-skip">
+        <a href="#the-compose-specification-build-support" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Ubuntu
+              Build
             
           </span>
         </div>
@@ -438,12 +438,14 @@
           
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" checked>
     
     <label class="md-nav__link" for="nav-1-6">
       Docker
@@ -462,12 +464,14 @@
           
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6-1" type="checkbox" id="nav-1-6-1" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6-1" type="checkbox" id="nav-1-6-1" checked>
     
     <label class="md-nav__link" for="nav-1-6-1">
       Compose Specification
@@ -488,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../docker/compose/spec/" class="md-nav__link">
+    <a href="../spec/" class="md-nav__link">
       Spec
     </a>
   </li>
@@ -499,11 +503,160 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../docker/compose/build/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Build
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency-with-image" class="md-nav__link">
+    Consistency with Image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-built-images" class="md-nav__link">
+    Publishing built images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#illustrative-sample" class="md-nav__link">
+    Illustrative sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-definition" class="md-nav__link">
+    Build definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Build definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-required" class="md-nav__link">
+    context (REQUIRED)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    dockerfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_from" class="md-nav__link">
+    cache_from
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra_hosts" class="md-nav__link">
+    extra_hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation" class="md-nav__link">
+    isolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shm_size" class="md-nav__link">
+    shm_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementations" class="md-nav__link">
+    Implementations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -514,7 +667,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../docker/compose/deploy/" class="md-nav__link">
+    <a href="../deploy/" class="md-nav__link">
       Deploy
     </a>
   </li>
@@ -532,7 +685,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../docker/config/" class="md-nav__link">
+    <a href="../../config/" class="md-nav__link">
       Configuration
     </a>
   </li>
@@ -548,14 +701,12 @@
           
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7" >
     
     <label class="md-nav__link" for="nav-1-7">
       Linux
@@ -574,20 +725,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../linux/ubuntu/versions/" class="md-nav__link">
       Ubuntu
     </a>
-    
   </li>
 
         
@@ -687,6 +829,132 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency-with-image" class="md-nav__link">
+    Consistency with Image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-built-images" class="md-nav__link">
+    Publishing built images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#illustrative-sample" class="md-nav__link">
+    Illustrative sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-definition" class="md-nav__link">
+    Build definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Build definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-required" class="md-nav__link">
+    context (REQUIRED)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    dockerfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_from" class="md-nav__link">
+    cache_from
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra_hosts" class="md-nav__link">
+    extra_hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation" class="md-nav__link">
+    isolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shm_size" class="md-nav__link">
+    shm_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementations" class="md-nav__link">
+    Implementations
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -697,63 +965,246 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/model-modem/model-modem/edit/master/docs/dev/linux/ubuntu/versions.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/model-modem/model-modem/edit/master/docs/dev/docker/compose/build.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="ubuntu-debian-version-names">Ubuntu / Debian Version Names<a class="headerlink" href="#ubuntu-debian-version-names" title="Permanent link">⚓︎</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/Ubuntu">Ubuntu</a>, the popular Linux distribution, is based on the Debian Linux distribution.  Sometimes you will see Ubuntu and Debian versions referred to by their version number or code name alternatively.  There isn't a great reference out there on which how those the map together.  Below is a port of a very helpful StackOverflow answer that has this info.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<table>
-    <thead>
-        <tr>
-            <th colspan="2" class="super-thead">Ubuntu</th>
-            <th colspan="2" class="super-thead">Debian</th>
-        </tr>
-        <tr class="sub">
-            <th>Version</th>
-            <th>Name</th>
-            <th>Name</th>
-            <th>Version</th>
-        </tr>
-    </thead>
-    <tbody>
-<tr><td>20.04</td><td>focal      </td><td>bullseye</td><td>11</td></tr> 
-<tr><td>19.10</td><td>eoan       </td><td>buster  </td><td>10</td></tr> 
-<tr><td>19.04</td><td>disco      </td><td>buster  </td><td>10</td></tr>
-<tr><td>18.10</td><td>cosmic     </td><td>buster  </td><td>10</td></tr>
-<tr><td>18.04</td><td>bionic     </td><td>buster  </td><td>10</td></tr>
-<tr><td>17.10</td><td>artful     </td><td>stretch </td><td>9</td></tr>  
-<tr><td>17.04</td><td>zesty      </td><td>stretch </td><td>9</td></tr>
-<tr><td>16.10</td><td>yakkety    </td><td>stretch </td><td>9</td></tr>
-<tr><td>16.04</td><td>xenial     </td><td>stretch </td><td>9</td></tr>
-<tr><td>15.10</td><td>wily       </td><td>jessie  </td><td>8</td></tr>  
-<tr><td>15.04</td><td>vivid      </td><td>jessie  </td><td>8</td></tr>
-<tr><td>14.10</td><td>utopic     </td><td>jessie  </td><td>8</td></tr>
-<tr><td>14.04</td><td>trusty     </td><td>jessie  </td><td>8</td></tr>
-<tr><td>13.10</td><td>saucy      </td><td>wheezy  </td><td>7</td></tr>  
-<tr><td>13.04</td><td>raring     </td><td>wheezy  </td><td>7</td></tr>
-<tr><td>12.10</td><td>quantal    </td><td>wheezy  </td><td>7</td></tr>
-<tr><td>12.04</td><td>precise    </td><td>wheezy  </td><td>7</td></tr>
-<tr><td>11.10</td><td>oneiric    </td><td>wheezy  </td><td>7</td></tr>
-<tr><td>11.04</td><td>natty      </td><td>squeeze </td><td>6</td></tr>  
-<tr><td>10.10</td><td>maverick   </td><td>squeeze </td><td>6</td></tr>
-<tr><td>10.04</td><td>lucid      </td><td>squeeze </td><td>6</td></tr>
-</tbody>
-</table>
-<style>
-    table tbody tr td:nth-child(2),
-    table thead tr.sub th:nth-child(2){border-right:1px solid #Efefef !important}
-</style>
-
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="https://askubuntu.com/a/445496/1012845"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg></span> What Debian version are the different Ubuntu versions based on?</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+                <h1 id="the-compose-specification-build-support">The Compose Specification - Build support<a class="headerlink" href="#the-compose-specification-build-support" title="Permanent link">⚓︎</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document has been reproduced here from its <a href="https://github.com/compose-spec/compose-spec">original source</a> to provide a better reading experience.</p>
 </div>
+<p><em>Note:</em> Build is an OPTIONAL part of the Compose Specification</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>Compose specification is a platform-neutral way to define multi-container applications. A Compose implementation 
+focussing on development use-case to run application on local machine will obviously also support (re)building 
+application from sources. The Compose Build specification allows to define the build process within a Compose file 
+in a portable way.</p>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">⚓︎</a></h2>
+<p>Compose Specification is extended to support an OPTIONAL <code>build</code> subsection on services. This section define the 
+build requirements for service container image. Only a subset of Compose file services MAY define such a Build 
+subsection, others being created based on <code>Image</code> attribute. When a Build subsection is present for a service, it 
+is <em>valid</em> for a Compose file to miss an <code>Image</code> attribute for corresponding service, as Compose implementation 
+can build image from source.</p>
+<p>Build can be either specified as a single string defining a context path, or as a detailled build definition. </p>
+<p>In the former case, the whole path is used as a Docker context to execute a docker build, looking for a canonical 
+<code>Dockerfile</code> at context root. Context path can be absolute or relative, and if so relative path MUST be resolved 
+from Compose file parent folder. As an absolute path prevent the Compose file to be portable, Compose implementation 
+SHOULD warn user accordingly.</p>
+<p>In the later case, build arguments can be specified, including an alternate <code>Dockerfile</code> location. This one can be 
+absolute or relative path. If Dockerfile path is relative, it MUST be resolved from context path.  As an absolute 
+path prevent the Compose file to be portable, Compose implementation SHOULD warn user if an absolute alternate 
+Dockerfile path is used.</p>
+<h2 id="consistency-with-image">Consistency with Image<a class="headerlink" href="#consistency-with-image" title="Permanent link">⚓︎</a></h2>
+<p>When service definition do include both <code>Image</code> attribute and a <code>Build</code> section, Compose implementation can't 
+guarantee a pulled image is strictly equivalent to building the same image from sources. Without any explicit 
+user directives, Compose implementation with Build support MUST first try to pull Image, then build from source 
+if image was not found on registry. Compose implementation MAY offer options to customize this behaviour by user 
+request.</p>
+<h2 id="publishing-built-images">Publishing built images<a class="headerlink" href="#publishing-built-images" title="Permanent link">⚓︎</a></h2>
+<p>Compose implementation with Build support SHOULD offer an option to push built images to a registry. Doing so, it 
+MUST NOT try to push service images without an <code>Image</code> attribute. Compose implementation SHOULD warn user about 
+missing <code>Image</code> attribute which prevent image being pushed.</p>
+<p>Compose implementation MAY offer a mechanism to compute an <code>Image</code> attribute for service when not explicitly 
+declared in yaml file. In such a case, the resulting Compose configuration is considered to have a valid <code>Image</code> 
+attribute, whenever the actual raw yaml file doesn't explicitly declare one.</p>
+<h2 id="illustrative-sample">Illustrative sample<a class="headerlink" href="#illustrative-sample" title="Permanent link">⚓︎</a></h2>
+<p>The following sample illustrates Compose specification concepts with a concrete sample application. The sample is non-normative.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">frontend</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome/webapp</span>
+    <span class="nt">build</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./webapp</span>
+
+  <span class="nt">backend</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome/database</span>
+    <span class="nt">build</span><span class="p">:</span>
+        <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">backend</span>
+        <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">../backend.Dockerfile</span>
+
+  <span class="nt">custom</span><span class="p">:</span>
+    <span class="nt">build</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/custom</span>
+</code></pre></div>
+</td></tr></table>
+<p>When used to build service images from source, such a Compose file will create three docker images: </p>
+<ul>
+<li><code>awesome/webapp</code> docker image is build using <code>webapp</code> sub-directory within Compose file parent folder as docker build context. Lack of a <code>Dockerfile</code> within this folder will throw an error.</li>
+<li><code>awesome/database</code> docker image is build using <code>backend</code> sub-directory within Compose file parent folder. <code>backend.Dockerfile</code> file is used to define build steps, this file is searched relative to context path, which means for this sample <code>..</code> will resolve to Compose file parent folder, so <code>backend.Dockerfile</code> is a sibling file.</li>
+<li>a docker image is build using <code>custom</code> directory within user's HOME as docker context. Compose implementation warn user about non-portable path used to build image.</li>
+</ul>
+<p>On push, both <code>awesome/webapp</code> and <code>awesome/database</code> docker images are pushed to (default) registry. <code>custom</code> service image is skipped as no <code>Image</code> attribute is set and user is warned about this missing attribute.</p>
+<h2 id="build-definition">Build definition<a class="headerlink" href="#build-definition" title="Permanent link">⚓︎</a></h2>
+<p>The <code>build</code> element define configuration options that are applied by Compose implementations to build Docker image from source.
+<code>build</code> can be specified either as a string containing a path to the build context or a detailled structure:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>services:
+  webapp:
+    build: ./dir
+</code></pre></div>
+</td></tr></table>
+<p>Using this string syntax, only the build context can be configured as a relative path to the Compose file's parent folder. 
+This path MUST be a directory and contain a <code>Dockerfile</code>.</p>
+<p>Alternatively <code>build</code> can be an object with fields defined as follow</p>
+<h3 id="context-required">context (REQUIRED)<a class="headerlink" href="#context-required" title="Permanent link">⚓︎</a></h3>
+<p><code>context</code> defines either a path to a directory containing a Dockerfile, or a url to a git repository.</p>
+<p>When the value supplied is a relative path, it MUST be interpreted as relative to the location of the Compose file. 
+Compose implementations MUST warn user about absolute path used to define build context as those prevent Compose file 
+for being portable.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: ./dir
+</code></pre></div>
+</td></tr></table>
+<h3 id="dockerfile">dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">⚓︎</a></h3>
+<p><code>dockerfile</code> allows to set an alternate Dockerfile. A relative path MUST be resolved from the build context.
+Compose implementations MUST warn user about absolute path used to define Dockerfile as those prevent Compose file 
+for being portable.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  dockerfile: webapp.Dockerfile
+</code></pre></div>
+</td></tr></table>
+<h3 id="args">args<a class="headerlink" href="#args" title="Permanent link">⚓︎</a></h3>
+<p><code>args</code> define build arguments, i.e. Dockerfile <code>ARG</code> values.</p>
+<p>Using following Dockerfile:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">ARG</span> GIT_COMMIT
+<span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&quot;Based on commit: </span><span class="nv">$GIT_COMMIT</span><span class="s2">&quot;</span>
+</code></pre></div>
+</td></tr></table></p>
+<p><code>args</code> can be set in Compose file under the <code>build</code> key to define <code>GIT_COMMIT</code>. <code>args</code> can be set a mapping or a list:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  args:    
+    GIT_COMMIT: cdc3b19
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  args:
+    - GIT_COMMIT=cdc3b19
+</code></pre></div>
+</td></tr></table>
+<p>Value can be omited when specifying a build argument, in which case its value at build time MUST be obtained by user interaction,
+otherwise build arg won't be set when building the Docker image.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>args:
+  - GIT_COMMIT
+</code></pre></div>
+</td></tr></table>
+<h3 id="cache_from">cache_from<a class="headerlink" href="#cache_from" title="Permanent link">⚓︎</a></h3>
+<p><code>cache_from</code> defines a list of images that the Image builder SHOULD uses for cache resolution.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  cache_from:
+    - alpine:latest
+    - corp/web_app:3.14
+</code></pre></div>
+</td></tr></table>
+<h3 id="extra_hosts">extra_hosts<a class="headerlink" href="#extra_hosts" title="Permanent link">⚓︎</a></h3>
+<p><code>extra_hosts</code> adds hostname mappings at build-time. Use the same syntax as <a href="../spec/#extra_hosts">extra_hosts</a>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>extra_hosts:
+  - &quot;somehost:162.242.195.82&quot;
+  - &quot;otherhost:50.31.209.229&quot;
+</code></pre></div>
+</td></tr></table>
+<p>Compose implementations MUST create matching entry with the IP address and hostname in the container's network
+configuration, which means for Linux <code>/etc/hosts</code> will get extra lines:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>162.242.195.82  somehost
+50.31.209.229   otherhost
+</code></pre></div>
+</td></tr></table>
+<h3 id="isolation">isolation<a class="headerlink" href="#isolation" title="Permanent link">⚓︎</a></h3>
+<p><code>isolation</code> specifies a build’s container isolation technology. Like <a href="../spec/#isolation">isolation</a> supported values 
+are platform-specific.</p>
+<h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">⚓︎</a></h3>
+<p><code>labels</code> add metadata to the resulting image. <code>labrls</code> can be set either as an array or a map.</p>
+<p>reverse-DNS notation SHOULD be used to prevent labels from conflicting with those used by other software.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  labels:
+    com.example.description: &quot;Accounting webapp&quot;
+    com.example.department: &quot;Finance&quot;
+    com.example.label-with-empty-value: &quot;&quot;
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  labels:
+    - &quot;com.example.description=Accounting webapp&quot;
+    - &quot;com.example.department=Finance&quot;
+    - &quot;com.example.label-with-empty-value&quot;
+</code></pre></div>
+</td></tr></table>
+<h3 id="shm_size">shm_size<a class="headerlink" href="#shm_size" title="Permanent link">⚓︎</a></h3>
+<p><code>shm_size</code> set the size of the shared memory (<code>/dev/shm</code> partition on Linux) allocated for building Docker image. Specify
+as an integer value representing the number of bytes or as a string expressing a <a href="../spec/#specifying-byte-values">byte value</a>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  shm_size: &#39;2gb&#39;
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">build</span><span class="p">:</span>
+  <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+  <span class="nt">shm_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10000000</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="target">target<a class="headerlink" href="#target" title="Permanent link">⚓︎</a></h3>
+<p><code>target</code> defines the stage to build as defined inside a multi-stage <code>Dockerfile</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>build:
+  context: .
+  target: prod
+</code></pre></div>
+</td></tr></table>
+<h2 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><a href="https://docs.docker.com/compose">docker-compose</a></li>
+<li><a href="https://docs.docker.com/buildx/working-with-buildx/">buildX bake</a></li>
+</ul>
                 
               
               
@@ -788,7 +1239,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../../docker/config/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../spec/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -797,19 +1248,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Configuration
+                Spec
               </div>
             </div>
           </a>
         
         
-          <a href="../../../mkdocs/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../deploy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MKDocs
+                Deploy
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

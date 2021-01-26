@@ -14,7 +14,7 @@
     
     
       
-        <title>Configuration - Model Modem</title>
+        <title>Gearman - Model Modem</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-configuration" class="md-skip">
+        <a href="#gearman" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Configuration
+              Gearman
             
           </span>
         </div>
@@ -166,15 +166,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../cheat-codes/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../cheat-codes/" class="md-tabs__link">
         Development
       </a>
     </li>
@@ -260,14 +258,12 @@
       
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
     
     <label class="md-nav__link" for="nav-1">
       Development
@@ -380,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../php/official-docker/" class="md-nav__link">
+    <a href="../official-docker/" class="md-nav__link">
       Official Docker
     </a>
   </li>
@@ -438,14 +434,12 @@
           
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" >
     
     <label class="md-nav__link" for="nav-1-6">
       Docker
@@ -490,7 +484,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose/spec/" class="md-nav__link">
+    <a href="../../docker/compose/spec/" class="md-nav__link">
       Spec
     </a>
   </li>
@@ -503,7 +497,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose/build/" class="md-nav__link">
+    <a href="../../docker/compose/build/" class="md-nav__link">
       Build
     </a>
   </li>
@@ -516,7 +510,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose/deploy/" class="md-nav__link">
+    <a href="../../docker/compose/deploy/" class="md-nav__link">
       Deploy
     </a>
   </li>
@@ -532,49 +526,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Configuration
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../docker/config/" class="md-nav__link">
       Configuration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#logging" class="md-nav__link">
-    Logging
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -716,21 +672,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#logging" class="md-nav__link">
-    Logging
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -741,33 +682,28 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/model-modem/model-modem/edit/master/docs/dev/docker/config.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/model-modem/model-modem/edit/master/docs/dev/php/gearman.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="docker-configuration">Docker Configuration<a class="headerlink" href="#docker-configuration" title="Permanent link">⚓︎</a></h1>
-<h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">⚓︎</a></h2>
-<p>It is standard best practice to send logs of applications running in a Docker container to the <a href="https://en.wikipedia.org/wiki/Standard_streams">standard output and error streams</a> of the image's OS (<code>stdout</code> and <code>stderr</code>).  Once you do that, you can view those logs by running the <a href="https://docs.docker.com/config/containers/logging/"><code>docker logs</code></a> command.</p>
-<p>When applications running in your image are designed to write their logs to a file—rather than to the standard output streams—you can use the file handles below (provided by Docker) to stream log events to <code>stdout</code> or <code>stderr</code>.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>File Location</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>STDOUT</code></td>
-<td><code>/proc/self/fd/1</code></td>
-</tr>
-<tr>
-<td><code>STDERR</code></td>
-<td><code>/proc/self/fd/2</code></td>
-</tr>
-</tbody>
-</table>
+                <h1 id="gearman">Gearman<a class="headerlink" href="#gearman" title="Permanent link">⚓︎</a></h1>
+<p>Gearman is (as far as I can tell) a now defunct message queue system that made it relatively easy to send messages from one script to another.  I used Gearman extensively with PHP in days of yore.  I would not recommend you do this today.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>RUN apt-get install -y libboost-all-dev gperf libevent-dev uuid-dev
+RUN wget https://github.com/gearman/gearmand/releases/download/<span class="si">${</span><span class="nv">GEARMAND_VERSION</span><span class="si">}</span>/gearmand-<span class="si">${</span><span class="nv">GEARMAND_VERSION</span><span class="si">}</span>.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    tar -xzf gearmand-<span class="si">${</span><span class="nv">GEARMAND_VERSION</span><span class="si">}</span>.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    <span class="nb">cd</span> gearmand-<span class="si">${</span><span class="nv">GEARMAND_VERSION</span><span class="si">}</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    ./configure <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    make <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    make install
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -798,41 +734,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../compose/deploy/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Deploy
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../linux/ubuntu/versions/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Ubuntu
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
