@@ -3,6 +3,7 @@ nav:
   - About: index.md
   - Development:
     - Cheat Codes: dev/cheat-codes.md
+    - Git: dev/git/cheatsheet.md
     - Python: 
       - pip: dev/py/pip.md
     - PHP:
@@ -10,10 +11,15 @@ nav:
     - SQL:
       - SQL Server: dev/sql/sql-server.md
     - Docker:
+      - Compose Specification: 
+        - Spec: dev/docker/compose/spec.md
+        - Build: dev/docker/compose/build.md
+        - Deploy: dev/docker/compose/deploy.md
       - Configuration: dev/docker/config.md
     - Linux:
-      - Ubuntu:
-        - Versions: dev/linux/ubuntu/versions.md
+    #  - Bash:
+    #    - Reference: dev/linux/bash/refs.md
+      - Ubuntu: dev/linux/ubuntu/versions.md
     - MKDocs: dev/mkdocs.md
   - Technology:
     - My Stack: tech/my-stack.md
@@ -22,6 +28,9 @@ nav:
 # Site Customizations
 extra_css:
   - assets/css/extra.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js  # Sortable tables!
+  - assets/js/extra.js
 theme:
   name: material
   custom_dir: theme_overrides
